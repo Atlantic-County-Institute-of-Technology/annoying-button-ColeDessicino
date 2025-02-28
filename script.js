@@ -1,7 +1,5 @@
 const button1 = document.getElementById("button1");
 
-button1.addEventListener("click", yell_at_user);
+button1.addEventListener("click", button_press);
 
-function yell_at_user() {
-    alert("STOP PRESSING THIS BUTTON");
-}
+function button_press (element.style.top = "25px");
