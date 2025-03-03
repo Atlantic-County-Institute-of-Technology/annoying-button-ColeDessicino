@@ -1,7 +1,7 @@
 #button1 {
     position: absolute;
-    margin-left: 44%;
-    margin-right: 50%;
+    margin-left: 55%;
+    margin-right: 0%;
     top: 300px;
     height: 150px;
     width: 150px;
@@ -11,8 +11,38 @@
     font-weight: bold;
     background-color: red;
     box-shadow: 0px 8px 0px 2px rgb(105, 105, 105);
-    animation: button_pres 3s infinite linear;
-    touch-action: button_press;
+}
+
+#button2 {
+    position: absolute;
+    margin-left: 35%;
+    margin-right: 5%;
+    top: 300px;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    border: 0px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: blue;
+    box-shadow: 0px 8px 0px 2px rgb(105, 105, 105);
+}
+
+#textred {
+    position: absolute;
+    margin-left: 70%;
+    top: 0px;
+    color: red;
+    font-size: 20px;
+}
+
+#textblue {
+    position: absolute;
+    margin-left: 10%;
+    margin-right: 50%;
+    top: 0px;
+    color: blue;
+    font-size: 20px;
 }
 
 @keyframes button_press {
