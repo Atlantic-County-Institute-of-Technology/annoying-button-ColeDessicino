@@ -13,25 +13,35 @@ function annoyred() {
         textred.innerHTML = "How about you click blue.";
     }
     else if( clicksred == 2 ) {
-        textred.innerHTML = "I asked you to stop.";
+        textred.innerHTML = "Please stop.";
     }
     else if( clicksred == 3 ) {
-        textred.innerHTML = "I said stop.";
+        textred.innerHTML = "You are being rude.";
     }
     else if( clicksred == 4 ) {
-        textred.innerHTML = "I SAID STOP!!";
+        textred.innerHTML = "I will call the police.";
     }
     else if( clicksred == 5 ) {
         textred.innerHTML = "STOP!!";
     }
     else if( clicksred == 6 ) {
-        textred.innerHTML = "Fine I will just ignore you.";
-    }
-    else if( clicksred == 10 ) {
-        textred.innerHTML = "I will find you";
-    }
-    else if( clicksred == 11 ) {
         textred.innerHTML = "Try and catch me now.";
+        button1.classList.add("move1");
+    }
+    else if( clicksred == 7 ) {
+        textred.innerHTML = "I won't let you win that easy.";
+        button1.classList.remove("move1");
+        button1.classList.add("move2");
+    }
+    else if( clicksred == 8 ) {
+        textred.innerHTML = "Why are you doing this?";
+        button1.classList.remove("move2");
+        button1.classList.add("move3");
+    }
+    else if( clicksred == 9 ) {
+        textred.innerHTML = "Around we go.";
+        button1.classList.remove("move3");
+        button1.classList.add("spin1");
     }
 }
 
@@ -43,7 +53,7 @@ button2.addEventListener("click", annoyblue);
 function annoyblue() {
     clicksblue++;
     if( clicksblue == 1 ) {
-        textblue.innerHTML = "Not me, red.";
+        textblue.innerHTML = "You should click red.";
     }
     else if( clicksblue == 2 ) {
         textblue.innerHTML = "I asked you to stop.";

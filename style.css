@@ -1,10 +1,10 @@
-#button1 {
+.button1 {
     position: absolute;
     margin-left: 55%;
     margin-right: 0%;
-    top: 300px;
-    height: 150px;
-    width: 150px;
+    margin-top: 28%;
+    height: 100px;
+    width: 100px;
     border-radius: 50%;
     border: 0px;
     font-size: 18px;
@@ -13,13 +13,13 @@
     box-shadow: 0px 8px 0px 2px rgb(105, 105, 105);
 }
 
-#button2 {
+.button2 {
     position: absolute;
     margin-left: 35%;
     margin-right: 5%;
-    top: 300px;
-    height: 150px;
-    width: 150px;
+    margin-top: 28%;
+    height: 100px;
+    width: 100px;
     border-radius: 50%;
     border: 0px;
     font-size: 18px;
@@ -28,7 +28,7 @@
     box-shadow: 0px 8px 0px 2px rgb(105, 105, 105);
 }
 
-#textred {
+.textred {
     position: absolute;
     margin-left: 70%;
     top: 0px;
@@ -36,7 +36,7 @@
     font-size: 20px;
 }
 
-#textblue {
+.textblue {
     position: absolute;
     margin-left: 10%;
     margin-right: 50%;
@@ -45,7 +45,26 @@
     font-size: 20px;
 }
 
-@keyframes button_press {
-    0% {transform: translateX(0px);}
-    100% {transform: translateX(100px);}
+.move1 {
+    left: 100px;
+}
+
+.move2 {
+    right: 500px;
+    top: -100px;
+}
+
+.move3 {
+    right: 800px;
+    top: 300px;
+}
+
+.spin1{
+    right: 100px;
+    animation: spinning1 10s linear infinite;
+}
+
+@keyframes spinning1{
+    0% {transform: rotate(0deg), translateX(0px);}
+    100% {transform: rotate(360deg), translateX(0px);}
 }
