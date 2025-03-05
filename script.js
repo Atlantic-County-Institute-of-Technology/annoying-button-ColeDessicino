@@ -43,6 +43,16 @@ function annoyred() {
         button1.classList.remove("move3");
         button1.classList.add("spin1");
     }
+    else if( clicksred == 10 ) {
+        textred.innerHTML = "Can you please stop.";
+        button1.classList.remove("spin1");
+        button1.classList.add("spin2");
+    }
+    else if( clicksred == 11 ) {
+        textred.innerHTML = "Go click blue more or something.";
+        button1.classList.remove("spin2");
+        button1.classList.add("spin");
+    }
 }
 
 
@@ -56,10 +66,10 @@ function annoyblue() {
         textblue.innerHTML = "You should click red.";
     }
     else if( clicksblue == 2 ) {
-        textblue.innerHTML = "I asked you to stop.";
+        textblue.innerHTML = "DON'T CLICK ME CLICK RED.";
     }
     else if( clicksblue == 3 ) {
-        textblue.innerHTML = "I said stop.";
+        textblue.innerHTML = "STOP IT!!";
     }
     else if( clicksblue == 4 ) {
         textblue.innerHTML = "I SAID STOP!!";
@@ -68,13 +78,19 @@ function annoyblue() {
         textblue.innerHTML = "STOP!!";
     }
     else if( clicksblue == 6 ) {
-        textblue.innerHTML = "Fine I will just ignore you.";
+        textblue.innerHTML = "THAT IS IT I WILL JUST IGNORE YOU!";
     }
     else if( clicksblue == 10 ) {
         textblue.innerHTML = "I will find you";
     }
     else if( clicksblue == 11 ) {
-        textblue.innerHTML = "Try and catch me now.";
+        textblue.innerHTML = "Can't click me while I'm behind my glass wall.";
+        const glass = document.createElement("glass");
+        glass.classList.add("glass");
+        document.body.appendChild(glass);
+    }
+    else if( clicksblue == 12 ) {
+        textblue.innerHTML = "Test.";
     }
 }
 
