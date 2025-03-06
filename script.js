@@ -2,7 +2,8 @@ const button1 = document.getElementById("button1");
 const button2 = document.getElementById("button2");
 let textred = document.getElementById("textred");
 let textblue = document.getElementById("textblue");
-
+let glass = document.createElement("glass");
+let steel = document.createElement("steel");
 let clicksred = 0;
 
 button1.addEventListener("click", annoyred);
@@ -50,8 +51,12 @@ function annoyred() {
     }
     else if( clicksred == 11 ) {
         textred.innerHTML = "Go click blue more or something.";
-        button1.classList.remove("spin2");
-        button1.classList.add("spin");
+        button1.classList.remove("spin2"); 
+        button1.classList.add("dashing");
+    }
+    else if( clicksred == 12 ) {
+        textred.innerHTML = "Why me?";
+        button1.classList.remove("dashing"); 
     }
 }
 
@@ -72,7 +77,7 @@ function annoyblue() {
         textblue.innerHTML = "STOP IT!!";
     }
     else if( clicksblue == 4 ) {
-        textblue.innerHTML = "I SAID STOP!!";
+        textblue.innerHTML = "JUST CLICK RED!!";
     }
     else if( clicksblue == 5 ) {
         textblue.innerHTML = "STOP!!";
@@ -84,15 +89,30 @@ function annoyblue() {
         textblue.innerHTML = "I will find you";
     }
     else if( clicksblue == 11 ) {
-        textblue.innerHTML = "Can't click me while I'm behind my glass wall.";
-        const glass = document.createElement("glass");
+        textblue.innerHTML = "Can't click me while I'm behind my glass.";
         glass.classList.add("glass");
         document.body.appendChild(glass);
     }
     else if( clicksblue == 12 ) {
-        textblue.innerHTML = "Test.";
+        textblue.innerHTML = "HOW!!";
+    }
+    else if( clicksblue == 13 ) {
+        textblue.innerHTML = "My steel wall is invincible.";
+        steel.classList.add("steel");
+        document.body.appendChild(steel);
     }
 }
 
+let shatter = new Audio('assets/GlassShattering.mp3')
 
+let clicksglass = 0;
 
+glass.addEventListener("click", breakglass);
+
+function breakglass() {
+    clicksglass++;
+    if( clicksglass == 10 ) { 
+        shatter.play();
+        glass.classList.remove("glass");
+    }
+}
