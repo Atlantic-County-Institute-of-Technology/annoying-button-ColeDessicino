@@ -3,7 +3,9 @@ const button2 = document.getElementById("button2");
 let textred = document.getElementById("textred");
 let textblue = document.getElementById("textblue");
 let glass = document.createElement("glass");
-let steel = document.createElement("steel");
+let blueend = document.createElement("blueend");
+let redend = document.createElement("redend");
+
 let clicksred = 0;
 
 button1.addEventListener("click", annoyred);
@@ -56,7 +58,16 @@ function annoyred() {
     }
     else if( clicksred == 12 ) {
         textred.innerHTML = "Why me?";
-        button1.classList.remove("dashing"); 
+        button1.classList.remove("dashing");
+        button1.classList.add("spindash");
+    }
+    else if( clicksred == 13 ) {
+        textred.innerHTML = "THATS IT";
+        button1.classList.remove("spindash");
+    }
+    else if( clicksred == 14 ) {
+        redend.classList.add("redend");
+        document.body.appendChild(redend);
     }
 }
 
@@ -97,9 +108,21 @@ function annoyblue() {
         textblue.innerHTML = "HOW!!";
     }
     else if( clicksblue == 13 ) {
-        textblue.innerHTML = "My steel wall is invincible.";
-        steel.classList.add("steel");
-        document.body.appendChild(steel);
+        textblue.innerHTML = "What can I do to convince you to stop?";
+    }
+    else if( clicksblue == 14 ) {
+        textblue.innerHTML = "I can give you money if you stop.";
+    }
+    else if( clicksblue == 15 ) {
+        textblue.innerHTML = "That was a lie by the way.";
+    }
+    else if( clicksblue == 16 ) {
+        textblue.innerHTML = "IF YOU CLICK ME AGAIN I WILL TURN THIS WHOLE PLACE BLUE!!";
+    }
+    else if( clicksblue == 17 ) {
+        textblue.innerHTML = "Blue Ending  Ending 2/5";
+        blueend.classList.add("blueend");
+        document.body.appendChild(blueend);
     }
 }
 
