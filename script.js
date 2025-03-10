@@ -6,10 +6,13 @@ let glass = document.createElement("glass");
 let blueend = document.createElement("blueend");
 let redend = document.createElement("redend");
 
+
+// adds clicking for red button
 let clicksred = 0;
 
 button1.addEventListener("click", annoyred);
 
+// adds the function for the red button
 function annoyred() {
     clicksred++;
     if( clicksred == 1 ) {
@@ -71,11 +74,12 @@ function annoyred() {
     }
 }
 
-
+// adds clicking for blue button
 let clicksblue = 0;
 
 button2.addEventListener("click", annoyblue);
 
+// adds the function for blue button
 function annoyblue() {
     clicksblue++;
     if( clicksblue == 1 ) {
@@ -126,6 +130,7 @@ function annoyblue() {
     }
 }
 
+// this is the breaking glass audio
 let shatter = new Audio('assets/GlassShattering.mp3')
 
 let clicksglass = 0;
@@ -135,6 +140,7 @@ glass.addEventListener("click", breakglass);
 function breakglass() {
     clicksglass++;
     if( clicksglass == 10 ) { 
+        // this plays the audio
         shatter.play();
         glass.classList.remove("glass");
     }
